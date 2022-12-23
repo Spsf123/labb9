@@ -1,17 +1,26 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
   char rank;
+  string a = "You have received Super Ultra Rare Unit!!!\n";
+  string b = "You have received 5 gems.\n";
+  string c = "You have received 1 gems.\n";
+  string d = "You have received 2000 coins.\n";
+  string e = "You have received very KAK items.\n";
   cout << "Input your rank: ";
   cin >> rank;
-  switch(rank){
-    case 'S': cout << "You have received Super Ultra Rare Unit!!!\n";
-    case 'A': cout << "You have received 5 gems.\n";
-    case 'B': cout << "You have received 1 gems.\n";
-    case 'C': cout << "You have received 2000 coins.\n";
-    case 'D': cout << "You have received very KAK items.\n";
+  if(rank == 'S'){
+    cout << a << b << c << d << e;
+  }else if(rank == 'A'){
+    cout  << b << c << d << e;
+  }else if(rank == 'B'){
+    cout << c << d << e;
+  }else if(rank == 'C'){
+    cout << d << e;
+  }else if(rank == 'D'){
+    cout << e;
   }
-  return 0;
 }
